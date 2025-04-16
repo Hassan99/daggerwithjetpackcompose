@@ -1,4 +1,4 @@
-package com.invenzo.daggerandroid
+package com.invenzo.daggerandroid.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -39,17 +39,29 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.lifecycle.ViewModelProvider
+import com.invenzo.daggerandroid.MyApp
 import com.invenzo.daggerandroid.ui.theme.DaggerAndroidTheme
+import com.invenzo.daggerandroid.viewmodel.LoginViewModel
+import javax.inject.Inject
 
 class LoginActivity : ComponentActivity() {
+
+    @Inject
+    lateinit var viewModelFactory: ViewModelProvider.Factory
+
+    private lateinit var loginViewModel: LoginViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        (application as MyApp).appComponent.inject(this)
         enableEdgeToEdge()
+        loginViewModel = ViewModelProvider(this, viewModelFactory)[LoginViewModel::class.java]
+
         setContent {
             DaggerAndroidTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                     login(
-                        name = "Android", modifier = Modifier.padding(innerPadding)
+                        loginViewModel, modifier = Modifier.padding(innerPadding)
                     )
                 }
             }
@@ -63,7 +75,7 @@ fun ScreenContainer(content: @Composable () -> Unit) {
         modifier = Modifier
             .fillMaxSize()
             .background(Color.White) // or your theme background
-            .padding(16.dp)          // optional padding
+            .padding(10.dp)          // optional padding
     ) {
         content()
     }
@@ -71,7 +83,7 @@ fun ScreenContainer(content: @Composable () -> Unit) {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun login(name: String, modifier: Modifier = Modifier) {
+fun login(viewModel: LoginViewModel?, modifier: Modifier) {
 
     var email = remember { mutableStateOf(TextFieldValue("")) }
     var password = remember { mutableStateOf(TextFieldValue("")) }
@@ -175,7 +187,8 @@ fun login(name: String, modifier: Modifier = Modifier) {
 @Preview(showBackground = true)
 @Composable
 fun loginPreview() {
+
     DaggerAndroidTheme {
-        login(name = "Android", modifier = Modifier.padding(10.dp))
+        login(null, modifier = Modifier.padding(10.dp))
     }
 }

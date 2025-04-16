@@ -1,4 +1,4 @@
-package com.invenzo.daggerandroid
+package com.invenzo.daggerandroid.activity
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
