@@ -1,10 +1,10 @@
-package com.invenzo.daggerandroid.viewmodel
+package com.invenzo.daggerandroid.frontend.viewmodel
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.invenzo.daggerandroid.repository.AuthRepository
+import com.invenzo.daggerandroid.frontend.repository.AuthRepository
 import javax.inject.Inject
 
 class LoginViewModel @Inject constructor(

@@ -1,4 +1,4 @@
-package com.invenzo.daggerandroid.factory
+package com.invenzo.daggerandroid.di.factory
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

@@ -1,10 +1,10 @@
 package com.invenzo.daggerandroid
 
 import android.app.Application
-import com.invenzo.daggerandroid.component.AppComponent
-import com.invenzo.daggerandroid.component.DaggerAppComponent
-import com.invenzo.daggerandroid.modules.NetworkModule
-import com.invenzo.daggerandroid.modules.RepositoryModule
+import com.invenzo.daggerandroid.di.component.AppComponent
+import com.invenzo.daggerandroid.di.component.DaggerAppComponent
+import com.invenzo.daggerandroid.di.modules.NetworkModule
+import com.invenzo.daggerandroid.di.modules.RepositoryModule
 
 class MyApp : Application() {
 

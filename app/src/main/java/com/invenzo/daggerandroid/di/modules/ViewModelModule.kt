@@ -1,9 +1,9 @@
-package com.invenzo.daggerandroid.modules
+package com.invenzo.daggerandroid.di.modules
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.invenzo.daggerandroid.factory.ViewModelFactory
-import com.invenzo.daggerandroid.viewmodel.LoginViewModel
+import com.invenzo.daggerandroid.di.factory.ViewModelFactory
+import com.invenzo.daggerandroid.frontend.viewmodel.LoginViewModel
 import dagger.Binds
 import dagger.MapKey
 import dagger.Module

@@ -1,9 +1,9 @@
-package com.invenzo.daggerandroid.component
+package com.invenzo.daggerandroid.di.component
 
 import com.invenzo.daggerandroid.activity.LoginActivity
-import com.invenzo.daggerandroid.modules.NetworkModule
-import com.invenzo.daggerandroid.modules.RepositoryModule
-import com.invenzo.daggerandroid.modules.ViewModelModule
+import com.invenzo.daggerandroid.di.modules.NetworkModule
+import com.invenzo.daggerandroid.di.modules.RepositoryModule
+import com.invenzo.daggerandroid.di.modules.ViewModelModule
 import dagger.Component
 
 @Component(

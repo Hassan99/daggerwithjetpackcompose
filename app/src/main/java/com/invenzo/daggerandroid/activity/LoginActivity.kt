@@ -42,7 +42,7 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.ViewModelProvider
 import com.invenzo.daggerandroid.MyApp
 import com.invenzo.daggerandroid.ui.theme.DaggerAndroidTheme
-import com.invenzo.daggerandroid.viewmodel.LoginViewModel
+import com.invenzo.daggerandroid.frontend.viewmodel.LoginViewModel
 import javax.inject.Inject
 
 class LoginActivity : ComponentActivity() {

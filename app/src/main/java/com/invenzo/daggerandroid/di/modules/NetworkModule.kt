@@ -1,4 +1,4 @@
-package com.invenzo.daggerandroid.modules
+package com.invenzo.daggerandroid.di.modules
 
 import com.invenzo.daggerandroid.retrofit.ApiService
 import dagger.Module

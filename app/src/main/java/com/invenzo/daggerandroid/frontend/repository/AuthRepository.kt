@@ -1,4 +1,4 @@
-package com.invenzo.daggerandroid.repository
+package com.invenzo.daggerandroid.frontend.repository
 
 import com.invenzo.daggerandroid.retrofit.ApiService
 import javax.inject.Inject

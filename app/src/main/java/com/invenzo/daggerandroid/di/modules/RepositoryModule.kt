@@ -1,6 +1,6 @@
-package com.invenzo.daggerandroid.modules
+package com.invenzo.daggerandroid.di.modules
 
-import com.invenzo.daggerandroid.repository.AuthRepository
+import com.invenzo.daggerandroid.frontend.repository.AuthRepository
 import com.invenzo.daggerandroid.retrofit.ApiService
 import dagger.Module
 import dagger.Provides
