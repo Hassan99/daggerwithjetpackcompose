@@ -95,7 +95,7 @@ fun login(viewModel: LoginViewModel?, modifier: Modifier) {
             horizontalAlignment = Alignment.Start,
             modifier = Modifier
                 .fillMaxSize()
-                .padding(24.dp)
+                .padding(22.dp)
                 .imePadding(),
             verticalArrangement = Arrangement.Top,
 
